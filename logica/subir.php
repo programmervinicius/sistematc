@@ -11,7 +11,6 @@
 </head>
 <body>
 <head>
-
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="background-color: #006699;">
    <div class="container" >
    <div class="navbar-header" >
