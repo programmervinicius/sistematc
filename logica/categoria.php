@@ -29,6 +29,7 @@
         <li><a href="##" style="color: white;">Productos</a></li>
         <!--productos lista-->
         <li>
+
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" style="color: white;">
         	Categorias<span class="caret"></span>
         </a>
@@ -42,7 +43,7 @@
         <li><a href="##" style="color: white;">Clientes</a></li>
         <li><a href="##" style="color: white;">Acerca de</a></li>
         </ul>
-   </div>
+   </div> 
    </div>
 </nav>
 </head>
@@ -51,14 +52,14 @@
 <?php
 $a="TC0001";
 $v_cat="electronica";
-//$ruta="../img/TC0001/";
+//$ruta="../img/TC0001/";z
 include("conexion.php");
 $con=mysql_connect($host,$user,$password) or die ("problemas al conectar");
 mysql_select_db($baseDe,$con) or die ("no se puede establecer la conexion con la base de datos");
 
 $r=mysql_query("select a.code,a.nombre,a.descripcion,a.costo,a.categoria, b.nombre_img
-from  producto a, imagenes b
-where a.code=b.clave")or die(mysql_error());
+                from  producto a, imagenes b
+                where a.code=b.clave limit 1")or die(mysql_error());
 
 //impresión de la imagen
       while ($y=mysql_fetch_array($r)) {
